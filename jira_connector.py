@@ -13,5 +13,5 @@ class JIRAConnector(object):
         return IssueData(
             key=key,
             summary=issue.fields.summary,
-            description=issue.fields.description
+            description=issue.fields.description or ''
         )

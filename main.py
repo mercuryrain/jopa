@@ -1,5 +1,3 @@
-""" JOPA: Jira Open Pull Request Automator """
-
 import fire
 
 from config import load_config, validate_config

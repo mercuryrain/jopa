@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
+# Name of your virtual environment directory
+VENV_NAME="venv"
+
+# Path to the virtual environment
+VENV_PATH="${SCRIPT_DIR}/${VENV_NAME}"
+
+# Activate the virtual environment
+source "${VENV_PATH}/bin/activate"
+
+# Name of your Python script
+PYTHON_SCRIPT_NAME="main.py"
+
+# Run your Python script with all passed arguments
+python "${SCRIPT_DIR}/${PYTHON_SCRIPT_NAME}" "merge_to_remote" "$@"
+
+# Optionally deactivate the virtual environment
+deactivate
